@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="87g-Xy-tuP"/>
+                        <viewControllerLayoutGuide type="bottom" id="rol-sc-vTe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noface" translatesAutoresizingMaskIntoConstraints="NO" id="oWF-ZK-deq">
+                                <rect key="frame" x="202" y="189" width="140" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="He8-39-Apq"/>
+                                    <constraint firstAttribute="height" constant="140" id="rKU-u8-nXr"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZkL-6r-4hZ">
+                                <rect key="frame" x="20" y="189" width="140" height="140"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="dWY-oG-pLY"/>
+                                    <constraint firstAttribute="height" constant="140" id="wz1-XS-7tF"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noface" translatesAutoresizingMaskIntoConstraints="NO" id="N7m-JW-2eO">
+                                <rect key="frame" x="20" y="373" width="260" height="260"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="260" id="5GF-6n-w4A"/>
+                                    <constraint firstAttribute="width" constant="260" id="FdP-1Q-HiQ"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OAa-5z-ejS">
+                                <rect key="frame" x="138" y="87" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyd-h6-IOe">
+                                <rect key="frame" x="93" y="125" width="76" height="30"/>
+                                <state key="normal" title="原图"/>
+                                <connections>
+                                    <action selector="showOriginImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vOa-XR-KSr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkE-x7-lTE">
+                                <rect key="frame" x="191" y="125" width="98" height="30"/>
+                                <state key="normal" title="生成群头像"/>
+                                <connections>
+                                    <action selector="creatGroupImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sht-KS-D6u"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oWF-ZK-deq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="202" id="TRg-dS-FGe"/>
+                            <constraint firstItem="ZkL-6r-4hZ" firstAttribute="top" secondItem="87g-Xy-tuP" secondAttribute="bottom" constant="169" id="ctX-GQ-a6K"/>
+                            <constraint firstItem="ZkL-6r-4hZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="jpG-T7-HDR"/>
+                            <constraint firstItem="N7m-JW-2eO" firstAttribute="top" secondItem="ZkL-6r-4hZ" secondAttribute="bottom" constant="44" id="nYI-NM-GgT"/>
+                            <constraint firstItem="oWF-ZK-deq" firstAttribute="top" secondItem="ZkL-6r-4hZ" secondAttribute="bottom" constant="-140" id="nmV-8C-a3K"/>
+                            <constraint firstItem="N7m-JW-2eO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="qIr-EL-qd1"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="backView" destination="ZkL-6r-4hZ" id="RRK-bx-fLo"/>
+                        <outlet property="groupImage" destination="oWF-ZK-deq" id="XSQ-iL-6Um"/>
+                        <outlet property="groupImage2" destination="N7m-JW-2eO" id="PYj-pv-tSt"/>
+                        <outlet property="numberText" destination="OAa-5z-ejS" id="EmO-Pl-usI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.5" y="427.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="noface" width="194" height="218"/>
+    </resources>
+</document>
